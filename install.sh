@@ -29,7 +29,7 @@ echo "installer docker ? [y/n]"
 read install_docker
 if [ $install_docker = y ]
 	then $admin apt-get purge lxc-docker* && $admin apt-get purge docker.io* && $admin apt-get update
-		 $admin apt-get install apt-transport-https ca-certificates
+		 $admin apt-get install -y apt-transport-https ca-certificates
 		 $admin apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
 		 echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" | $admin tee /etc/apt/sources.list.d/docker.list
 		 $admin apt-get update && $admin apt-cache policy docker-engine
