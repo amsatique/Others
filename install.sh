@@ -36,6 +36,7 @@ if [ $install_docker = y ]
 fi
 
 #===============Tmux================
+clear
 echo "installer tmux ? [y/n]"
 read install_tmux
 if [ $install_tmux = y ]
